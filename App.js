@@ -8,25 +8,47 @@ import {
     Button,
     TouchableOpacity,
 } from 'react-native';
-
+import DefaultView from './src/DefaultView';
 export default class App extends Component {
     render() {
-        const word = {en: 'One', vn: 'Một', isMemorized: true};
         return (
+            // <SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
+            //     <View
+            //         style={{
+            //             flex: 0.7,
+            //             backgroundColor: 'green',
+            //             justifyContent: 'center',
+            //             alignItems: 'center',
+            //         }}>
+            //         <Text style={{backgroundColor: 'red'}}>1</Text>
+            //     </View>
+            //     <View
+            //         style={{
+            //             flex: 0.3,
+            //             backgroundColor: 'yellow',
+            //             justifyContent: 'flex-end',
+            //             alignItems: 'flex-start',
+            //         }}>
+            //         <Text style={{backgroundColor: 'pink'}}>1</Text>
+            //     </View>
+            // </SafeAreaView>
+
             <SafeAreaView style={styles.container}>
                 <View style={styles.containerText}>
-                    <Text style={styles.textStyleEn}>{word.en}</Text>
-                    <Text style={styles.textStyleVn}>
-                        {word.isMemorized ? '----' : word.vn}
-                    </Text>
+                    <DefaultView
+                        title="view100"
+                        color="red"
+                        textColor="white"
+                    />
+                    <DefaultView title="view200" color="cyan" />
+                    <DefaultView title="view300" color="green" />
+                    <DefaultView title="view400" color="pink" />
                 </View>
-                <View style={styles.containerTouchable}>
-                    <TouchableOpacity style={styles.touchForgot}>
-                        <Text style={styles.textTouchForgot}>Forgot</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.touchRemove}>
-                        <Text style={styles.textTouchRemove}>Remove</Text>
-                    </TouchableOpacity>
+                <View style={styles.containerText2}>
+                    <DefaultView title="view100" color="red" />
+                    <DefaultView title="view200" color="cyan" />
+                    <DefaultView title="view300" color="green" />
+                    <DefaultView title="view400" color="pink" />
                 </View>
             </SafeAreaView>
         );
@@ -39,8 +61,14 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
     },
     containerText: {
+        flex: 0.4,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    containerText2: {
+        flex: 0.6,
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
     },
     containerTouchable: {
         marginTop: 20,
@@ -48,7 +76,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
     },
     textStyleEn: {
-        fontSize: 20,
         color: 'green',
         fontWeight: 'bold',
     },

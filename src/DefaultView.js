@@ -6,7 +6,10 @@ const styles = StyleSheet.create({
         flex: 0.25,
         textAlign: 'center',
         backgroundColor: 'green',
-        color: 'black',
+        fontSize: 25,
+        justifyContent: 'center',
+        // alignItems: 'center',
+        color: 'white',
     },
 });
 

@@ -1,14 +1,16 @@
 import React from 'react';
-import {Text, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-    textStyle: {
+    contentstyle: {
         flex: 0.25,
-        textAlign: 'center',
-        backgroundColor: 'green',
         fontSize: 25,
         justifyContent: 'center',
-        // alignItems: 'center',
+        backgroundColor: 'green',
+    },
+    textStyle: {
+        textAlign: 'center',
+        alignItems: 'center',
         color: 'white',
     },
 });
@@ -20,8 +22,8 @@ export default function DefaultView({title, color, textColor}) {
         customStyle = {backgroundColor: color};
     }
     return (
-        <Text style={[styles.textStyle, customStyle, {color: textColor}]}>
-            {title}
-        </Text>
+        <View style={[styles.contentstyle, customStyle]}>
+            <Text style={[styles.textStyle, {color: textColor}]}>{title}</Text>
+        </View>
     );
 }

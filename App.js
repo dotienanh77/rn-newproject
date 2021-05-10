@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
     containerText: {
         flex: 0.4,
         flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
     },
     containerText2: {
         flex: 0.6,

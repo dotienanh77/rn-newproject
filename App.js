@@ -6,32 +6,31 @@ export default class App extends Component {
     render() {
         return (
             <SafeAreaView style={{flex: 1, flexDirection: 'column'}}>
-                <View
-                    style={{
-                        flex: 0.3,
-                        backgroundColor: 'red',
-                        borderWidth: 1.5,
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}>
-                    <Text
-                        style={{
-                            color: 'white',
-                            fontSize: 20,
-                            fontWeight: 'bold',
-                        }}>
-                        1
-                    </Text>
-                </View>
-
-                <View style={{flex: 0.7, flexDirection: 'row'}}>
+                <View style={{flex: 0.2, flexDirection: 'row'}}>
                     <View
                         style={{
                             flex: 0.3,
+                            backgroundColor: 'red',
+                            borderWidth: 2,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}>
+                        <Text
+                            style={{
+                                color: 'white',
+                                fontSize: 20,
+                                fontWeight: 'bold',
+                            }}>
+                            1
+                        </Text>
+                    </View>
+                    <View
+                        style={{
+                            flex: 0.7,
                             backgroundColor: 'pink',
-                            borderRightWidth: 1.5,
-                            borderBottomWidth: 1.5,
-                            borderLeftWidth: 1.5,
+                            borderTopWidth: 2,
+                            borderRightWidth: 2,
+                            borderBottomWidth: 2,
                             justifyContent: 'center',
                             alignItems: 'center',
                         }}>
@@ -44,50 +43,56 @@ export default class App extends Component {
                             2
                         </Text>
                     </View>
-                    <View style={{flex: 0.7, flexDirection: 'column'}}>
-                        <View
-                            style={{
-                                flex: 0.7,
-                                backgroundColor: 'blue',
-                                borderRightWidth: 1.5,
-                                borderBottomWidth: 1.5,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                            <Text
+                </View>
+                <View style={{flex: 0.8, flexDirection: 'column'}}>
+                    <View style={{flex: 0.7, flexDirection: 'row'}}>
+                        <View style={{flex: 0.8, flexDirection: 'column'}}>
+                            <View
                                 style={{
-                                    color: 'white',
-                                    fontSize: 20,
-                                    fontWeight: 'bold',
+                                    flex: 0.5,
+                                    backgroundColor: 'khaki',
+                                    borderLeftWidth: 2,
+                                    borderRightWidth: 2,
+                                    borderBottomWidth: 2,
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
                                 }}>
-                                3
-                            </Text>
-                        </View>
-                        <View style={{flex: 0.3, flexDirection: 'row'}}>
-                        <View
-                            style={{
-                                flex: 0.5,
-                                backgroundColor: 'brown',
-                                borderRightWidth: 1.5,
-                                borderBottomWidth: 1.5,
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                            <Text
+                                <Text
+                                    style={{
+                                        color: 'white',
+                                        fontSize: 20,
+                                        fontWeight: 'bold',
+                                    }}>
+                                    3
+                                </Text>
+                            </View>
+                            {/* 4 */}
+                            <View
                                 style={{
-                                    color: 'white',
-                                    fontSize: 20,
-                                    fontWeight: 'bold',
+                                    flex: 0.5,
+                                    backgroundColor: 'violet',
+                                    borderLeftWidth: 2,
+                                    borderRightWidth: 2,
+                                    borderBottomWidth: 2,
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
                                 }}>
-                                4
-                            </Text>
+                                <Text
+                                    style={{
+                                        color: 'white',
+                                        fontSize: 20,
+                                        fontWeight: 'bold',
+                                    }}>
+                                    4
+                                </Text>
+                            </View>
                         </View>
                         <View
                             style={{
-                                flex: 0.5,
-                                backgroundColor: 'green',
-                                borderRightWidth: 1.5,
-                                borderBottomWidth: 1.5,
+                                flex: 0.2,
+                                backgroundColor: 'purple',
+                                borderRightWidth: 2,
+                                borderBottomWidth: 2,
                                 justifyContent: 'center',
                                 alignItems: 'center',
                             }}>
@@ -100,6 +105,45 @@ export default class App extends Component {
                                 5
                             </Text>
                         </View>
+                    </View>
+                    <View style={{flex: 0.3, flexDirection: 'row'}}>
+                        <View
+                            style={{
+                                flex: 0.5,
+                                backgroundColor: 'brown',
+                                borderRightWidth: 2,
+                                borderLeftWidth: 2,
+                                borderBottomWidth: 2,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                            <Text
+                                style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    fontWeight: 'bold',
+                                }}>
+                                6
+                            </Text>
+                        </View>
+
+                        <View
+                            style={{
+                                flex: 0.5,
+                                backgroundColor: 'orange',
+                                borderRightWidth: 2,
+                                borderBottomWidth: 2,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                            <Text
+                                style={{
+                                    color: 'white',
+                                    fontSize: 20,
+                                    fontWeight: 'bold',
+                                }}>
+                                7
+                            </Text>
                         </View>
                     </View>
                 </View>

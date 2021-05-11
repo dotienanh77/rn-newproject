@@ -3,20 +3,22 @@ import {Text, View, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     contentstyle: {
-        flex: 0.25,
+        flex: 1,
         fontSize: 25,
         justifyContent: 'center',
         backgroundColor: 'green',
+        alignItems: 'center',
     },
     textStyle: {
-        textAlign: 'center',
-        alignItems: 'center',
-        color: 'white',
+        //textAlign: 'center',
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: 'black',
     },
 });
 
 export default function DefaultView({title, color, textColor}) {
-    console.log(color);
+    //console.log(color);
     let customStyle;
     if (color) {
         customStyle = {backgroundColor: color};

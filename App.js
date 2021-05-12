@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
-import {Text, SafeAreaView, View, StyleSheet} from 'react-native';
-// import DefaultView from './src/DefaultView';
+import {
+    Text,
+    View,
+    Dimensions,
+    Platform,
+    SafeAreaView,
+    StyleSheet,
+} from 'react-native';
+
 export default class App extends Component {
     shouldRenderVn = (word) => {
         if (word.isMemorized) {
@@ -15,10 +22,7 @@ export default class App extends Component {
             <SafeAreaView style={styles.container}>
                 <Text style={styles.textStyleEn}>{word.en}</Text>
                 <Text style={styles.textStyleVn}>
-                    {/* cách 1 */}
-                    {/* {word.isMemorized ? '---' : word.vn} */}
-                    
-                    {/* cách 2, dùng khi render nhiều: tạo chương trình con */}
+                    {/* {word.isMemorized ? '----' : word.vn} */}
                     {this.shouldRenderVn(word)}
                 </Text>
             </SafeAreaView>
@@ -34,12 +38,12 @@ const styles = StyleSheet.create({
     },
     textStyleEn: {
         fontSize: 20,
-        fontWeight: 'bold',
         color: 'green',
+        fontWeight: 'bold',
     },
     textStyleVn: {
         fontSize: 20,
-        fontWeight: 'bold',
         color: 'red',
+        fontWeight: 'bold',
     },
 });

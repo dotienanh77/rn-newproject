@@ -23,25 +23,11 @@ export default class App extends Component {
                 </View>
 
                 <View style={styles.containerTouchable}>
-                    <TouchableOpacity
-                        style={{
-                            backgroundColor: 'green',
-                            padding: 10,
-                            borderRadius: 5,
-                        }}>
-                        <Text style={{fontSize: 14, color: 'white'}}>
-                            Forgot
-                        </Text>
+                    <TouchableOpacity style={styles.touchForgot}>
+                        <Text style={styles.textTouchForgot}>Forgot</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        style={{
-                            backgroundColor: 'black',
-                            padding: 10,
-                            borderRadius: 5,
-                        }}>
-                        <Text style={{fontSize: 14, color: 'white'}}>
-                            Remove
-                        </Text>
+                    <TouchableOpacity style={styles.touchRemove}>
+                        <Text style={styles.textTouchRemove}>Remove</Text>
                     </TouchableOpacity>
                 </View>
             </SafeAreaView>
@@ -74,4 +60,16 @@ const styles = StyleSheet.create({
         color: 'red',
         fontWeight: 'bold',
     },
+    touchForgot: {
+        backgroundColor: 'green',
+        padding: 10,
+        borderRadius: 5,
+    },
+    touchRemove: {
+        backgroundColor: 'black',
+        padding: 10,
+        borderRadius: 5,
+    },
+    textTouchForgot: {fontSize: 14, color: 'white'},
+    textTouchRemove: {fontSize: 14, color: 'white'},
 });

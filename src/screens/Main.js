@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {
     Text,
@@ -19,7 +20,6 @@ export default class Main extends Component {
                 </View>
                 <View style={styles.containerTouchable}>
                     <TouchableOpacity
-                        // eslint-disable-next-line react-native/no-inline-styles
                         style={{
                             ...styles.touchForgot,
                             backgroundColor: word.isMemorized ? 'green' : 'red',

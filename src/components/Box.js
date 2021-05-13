@@ -7,7 +7,7 @@ export default class Box extends Component {
         // khi kế thừa component thì thêm cái này vào (mặc định)
         super(props); // gọi hàm khởi tạo của component, và thực thi "props" được truyền vào
         this.state = {
-            // state là dữ liệu của component, cách định nghĩa một thuộc tính cho class
+            // state là dữ liệu muốn update lai của component , cách định nghĩa một thuộc tính cho class
             count: 0,
         };
     }

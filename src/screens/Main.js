@@ -9,9 +9,21 @@ import {
 } from 'react-native';
 
 export default class Main extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            words: [
+                {id: 1, en: 'One', vn: 'Một', isMemorized: false},
+                {id: 2, en: 'Two', vn: 'Hai', isMemorized: false},
+                {id: 3, en: 'Three', vn: 'Ba', isMemorized: true},
+                {id: 4, en: 'Four', vn: 'Bốn', isMemorized: true},
+                {id: 5, en: 'Five', vn: 'Năm', isMemorized: false},
+            ],
+        };
+    }
     renderWord = (word) => {
         return (
-            <View style={styles.containerWord}>
+            <View style={styles.containerWord} key={word.id}>
                 <View style={styles.containerText}>
                     <Text style={styles.textStyleEn}>{word.en}</Text>
                     <Text style={styles.textStyleVn}>
@@ -20,6 +32,18 @@ export default class Main extends Component {
                 </View>
                 <View style={styles.containerTouchable}>
                     <TouchableOpacity
+                        onPress={() => {
+                            const newWords = this.state.words.map((item) => {
+                                if (item.id === word.id) {
+                                    return {
+                                        ...item,
+                                        isMemorized: !item.isMemorized,
+                                    };
+                                }
+                                return item;
+                            });
+                            this.setState({words: newWords});
+                        }}
                         style={{
                             ...styles.touchForgot,
                             backgroundColor: word.isMemorized ? 'green' : 'red',
@@ -36,16 +60,11 @@ export default class Main extends Component {
         );
     };
     render() {
-        const words = [
-            {id: 1, en: 'One', vn: 'Một', isMemorized: false},
-            {id: 2, en: 'Two', vn: 'Hai', isMemorized: false},
-            {id: 3, en: 'Three', vn: 'Ba', isMemorized: true},
-            {id: 4, en: 'Four', vn: 'Bốn', isMemorized: true},
-            {id: 5, en: 'Five', vn: 'Năm', isMemorized: false},
-        ];
         return (
             <SafeAreaView style={styles.container}>
-                {words.map((word) => this.renderWord(word))}
+                {this.state.words.map((word) => {
+                    return this.renderWord(word);
+                })}
             </SafeAreaView>
         );
     }
